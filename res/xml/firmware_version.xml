@@ -45,6 +45,13 @@
         settings:enableCopying="true"
         settings:controller="com.android.settings.deviceinfo.firmwareversion.SecurityPatchLevelPreferenceController"/>
 
+    <!-- Clover Project Maintainer -->
+    <Preference
+        android:key="clover_maintainer"
+        android:title="@string/clover_maintainer_title"
+        android:summary="@string/clover_maintainer_summary"
+        settings:enableCopying="true"/>
+
     <!-- Mainline module version -->
     <!--
     <Preference
