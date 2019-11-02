@@ -38,4 +38,8 @@
     <string name="about_phone_resolution_card_value_format">%1$d x %2$d</string>
     <string name="about_phone_more_device_info_title">More device info</string>
 
+    <!-- Android debugging as root -->
+    <string name="adb_enable_root">Rooted debugging</string>
+    <string name="adb_enable_summary_root">Allow running Android debugging as root</string>
+
 </resources>
