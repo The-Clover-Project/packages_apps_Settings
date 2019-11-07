@@ -232,4 +232,8 @@
     <!-- Brightness Slider Style -->
     <string name="qs_brightness_slider_shape_title">Brightness slider shape</string>
 
+    <!-- Global Actions -->
+    <string name="global_actions_advanced_reboot_title">Enable advanced restart</string>
+    <string name="global_actions_advanced_reboot_summary">Show options for recovery and bootloader in power menu</string>
+
 </resources>
