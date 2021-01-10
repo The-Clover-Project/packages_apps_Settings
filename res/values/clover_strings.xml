@@ -206,4 +206,9 @@
     <string name="pif_data_title">Select PIF JSON to spoof</string>
     <string name="pif_data_summary">Select the PIF JSON for GMS/Play Store spoofing. Click delete to reset props and revert to default dynamic PIF.</string>
 
+    <!-- Doze on double tap -->
+    <string name="double_tap_title">Double tap</string>
+    <string name="doze_double_tap_title">Double tap to check phone</string>
+    <string name="doze_double_tap_summary">Pulse notifications by a double tap</string>
+
 </resources>
