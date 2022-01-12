@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/clover_crd_bg" />
+    <corners android:topLeftRadius="@dimen/clover_card_radius" android:topRightRadius="@dimen/clover_card_radius" />
+</shape>
