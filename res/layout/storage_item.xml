@@ -74,8 +74,7 @@
                 android:max="100"
                 android:layout_below="@android:id/title"
                 app:layout_constraintTop_toBottomOf="@android:id/title"
-                style="?android:attr/progressBarStyleHorizontal"
-                android:progressDrawable="@drawable/storage_progress_bar" />
+                style="?android:attr/progressBarStyleHorizontal" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
 </LinearLayout>

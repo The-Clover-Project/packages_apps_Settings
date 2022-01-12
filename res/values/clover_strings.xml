@@ -395,5 +395,8 @@
     <!-- Keybox Data -->
     <string name="keybox_data_title">Select keybox XML to spoof</string>
     <string name="keybox_data_summary">Select the keybox XML used for system-wide key attestation spoofing. Click delete to reset keybox data.</string>
+
+    <!-- Home -->
+    <string name="wellbeing">Digital Wellbeing</string>
   
 </resources>
