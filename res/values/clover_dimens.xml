@@ -56,4 +56,7 @@
     <dimen name="about_phone_info_card_value_text_size">15sp</dimen>
     <dimen name="about_phone_info_card_value_spacing">4dp</dimen>
 
+    <!-- Fingerprint -->
+    <dimen name="fingerprint_find_sensor_padding_top">16dp</dimen>
+
 </resources>
