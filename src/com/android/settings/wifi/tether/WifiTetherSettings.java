@@ -49,6 +49,8 @@ import com.android.settingslib.core.AbstractPreferenceController;
 import com.android.settingslib.search.SearchIndexable;
 import com.android.settingslib.wifi.WifiEnterpriseRestrictionUtils;
 
+import ink.kscope.settings.wifi.tether.WifiTetherHiddenSsidPreferenceController;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -78,6 +80,9 @@ public class WifiTetherSettings extends RestrictedDashboardFragment
     @VisibleForTesting
     static final String KEY_INSTANT_HOTSPOT = "wifi_hotspot_instant";
 
+    static final String KEY_WIFI_TETHER_HIDDEN_SSID =
+            WifiTetherHiddenSsidPreferenceController.PREF_KEY;
+
     @VisibleForTesting
     SettingsMainSwitchBar mMainSwitchBar;
     private WifiTetherSwitchBarController mSwitchBarController;
@@ -91,6 +96,8 @@ public class WifiTetherSettings extends RestrictedDashboardFragment
     WifiTetherMaximizeCompatibilityPreferenceController mMaxCompatibilityPrefController;
     @VisibleForTesting
     WifiTetherAutoOffPreferenceController mWifiTetherAutoOffPreferenceController;
+    @VisibleForTesting
+    WifiTetherHiddenSsidPreferenceController mHiddenSsidPrefController;
 
     @VisibleForTesting
     boolean mUnavailable;
@@ -200,6 +207,7 @@ public class WifiTetherSettings extends RestrictedDashboardFragment
         mMaxCompatibilityPrefController =
                 use(WifiTetherMaximizeCompatibilityPreferenceController.class);
         mWifiTetherAutoOffPreferenceController = use(WifiTetherAutoOffPreferenceController.class);
+        mHiddenSsidPrefController = use(WifiTetherHiddenSsidPreferenceController.class);
     }
 
     @Override
@@ -284,6 +292,7 @@ public class WifiTetherSettings extends RestrictedDashboardFragment
         controllers.add(
                 new WifiTetherAutoOffPreferenceController(context, KEY_WIFI_TETHER_AUTO_OFF));
         controllers.add(new WifiTetherMaximizeCompatibilityPreferenceController(context, listener));
+        controllers.add(new WifiTetherHiddenSsidPreferenceController(context, listener));
         return controllers;
     }
 
@@ -330,6 +339,7 @@ public class WifiTetherSettings extends RestrictedDashboardFragment
         }
         configBuilder.setAutoShutdownEnabled(
                 mWifiTetherAutoOffPreferenceController.isEnabled());
+        configBuilder.setHiddenSsid(mHiddenSsidPrefController.isHiddenSsidEnabled());
         return configBuilder.build();
     }
 
@@ -338,6 +348,7 @@ public class WifiTetherSettings extends RestrictedDashboardFragment
         use(WifiTetherSecurityPreferenceController.class).updateDisplay();
         use(WifiTetherPasswordPreferenceController.class).updateDisplay();
         use(WifiTetherMaximizeCompatibilityPreferenceController.class).updateDisplay();
+        use(WifiTetherHiddenSsidPreferenceController.class).updateDisplay();
     }
 
     public static final SearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
@@ -377,6 +388,7 @@ public class WifiTetherSettings extends RestrictedDashboardFragment
                 keys.add(KEY_WIFI_TETHER_MAXIMIZE_COMPATIBILITY);
                 keys.add(KEY_WIFI_HOTSPOT_SPEED);
                 keys.add(KEY_INSTANT_HOTSPOT);
+                keys.add(KEY_WIFI_TETHER_HIDDEN_SSID);
             } else {
                 if (!isSpeedFeatureAvailable()) {
                     keys.add(KEY_WIFI_HOTSPOT_SECURITY);

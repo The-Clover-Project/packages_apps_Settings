@@ -201,4 +201,8 @@
     <string name="hide_developer_status_summary">Prevent apps from checking adb and developer mode status</string>
     <string name="search">Search</string>
     <string name="search_apps">Search apps</string>
+
+    <!-- Hotspot -->
+    <string name="wifi_hotspot_hidden_ssid_title">Hidden network</string>
+    <string name="wifi_hotspot_hidden_ssid_summary">Your mobile hotspot\'s name won\'t appear in the list of available WLAN networks.</string>
 </resources>
