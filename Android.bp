@@ -126,6 +126,12 @@ android_library {
         "com.android.extensions.appfunctions.impl",
         "device-state-schema",
         "clover-preference",
+        "androidx.fragment_fragment",
+        "androidx.fragment_fragment-ktx",
+        "androidx.preference_preference-ktx",
+        "kotlin-stdlib",
+        "kotlinx_coroutines_android",
+        "kotlinx_coroutines",
     ],
 
     plugins: [
