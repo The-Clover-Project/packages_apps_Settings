@@ -118,6 +118,12 @@ android_library {
         "com_android_systemui_flags_lib",
         "settings_connectivity_flags_lib",
         "custom-preference",
+        "androidx.fragment_fragment",
+        "androidx.fragment_fragment-ktx",
+        "androidx.preference_preference-ktx",
+        "kotlin-stdlib",
+        "kotlinx_coroutines_android",
+        "kotlinx_coroutines",
     ],
 
     plugins: [
