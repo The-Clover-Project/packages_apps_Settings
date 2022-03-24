@@ -113,6 +113,12 @@ android_library {
         "keyboard_flags_lib",
         "vendor.lineage.fastcharge-V1.0-java",
         "custom-preference",
+        "androidx.fragment_fragment",
+        "androidx.fragment_fragment-ktx",
+        "androidx.preference_preference-ktx",
+        "kotlin-stdlib",
+        "kotlinx_coroutines_android",
+        "kotlinx_coroutines",
     ],
 
     plugins: [
