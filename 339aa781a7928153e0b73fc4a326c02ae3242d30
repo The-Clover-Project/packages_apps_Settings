@@ -16,6 +16,24 @@
       "message": "we might rather want to use this toggle?\nhttps://github.com/LineageOS/android_packages_apps_Settings/blob/lineage-22.0/res/xml/security_settings_fingerprint.xml#L39\nhttps://imgur.com/a/JIIGaLu",
       "revId": "339aa781a7928153e0b73fc4a326c02ae3242d30",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "09e2d7b7_25cfddc7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2024-10-25T15:39:47Z",
+      "side": 1,
+      "message": "That is for all other sensors other than udfps.",
+      "parentUuid": "f351f824_b6b8f3cc",
+      "revId": "339aa781a7928153e0b73fc4a326c02ae3242d30",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
