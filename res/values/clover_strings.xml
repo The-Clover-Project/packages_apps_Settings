@@ -412,5 +412,9 @@
     <!-- Game space -->
     <string name="game_space_title">Game space</string>
     <string name="game_space_summary">Enhance your gaming experience</string>
+
+    <!-- click to take partial screenshot -->
+    <string name="click_partial_screenshot_title">Click to partial screenshot</string>
+    <string name="click_partial_screenshot_summary">Short click Volume Down and Power to take partial screenshot</string>
   
 </resources>
