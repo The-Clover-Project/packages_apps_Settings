@@ -198,4 +198,8 @@
     <!-- Screenshot shutter -->
     <string name="screenshot_shutter_sound_title">Screenshot sound</string>
 
+    <!-- Keybox Data -->
+    <string name="keybox_data_title">Select keybox XML to spoof</string>
+    <string name="keybox_data_summary">Select keybox XML used for key attestation spoofing for all apps system wide. Click the delete button in order to reset the keybox data values used by the system.</string>
+
 </resources>
