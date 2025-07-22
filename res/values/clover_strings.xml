@@ -404,5 +404,9 @@
     <string name="ui_night_mode_dim_wall_summary">Dim the wallpaper when using dark theme</string>
     <string name="ui_night_mode_dim_wall_amount_title">Dim amount</string>
     <string name="ui_night_light_dim_wall_summary">Dim the wallpaper when using night light</string>
+
+    <!-- Pif Data -->
+    <string name="pif_data_title">Select PIF JSON to spoof</string>
+    <string name="pif_data_summary">Select PIF JSON used for prop attestation spoofing for google mobile services. Click the delete button in order to reset the PIF data props and use dynamic PIF props which are used by default.</string>
   
 </resources>
