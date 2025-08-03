@@ -17,6 +17,9 @@
 <resources
     xmlns:androidprv="http://schemas.android.com/apk/prv/res/android">
 
+    <color name="settingslib_materialColorSecondaryContainer">#334C47</color>
+    <color name="settingslib_materialColorOnSecondaryContainer">#CCE8E2</color>
+
     <!-- Dashboard/homepage icon colors -->
     <color name="homepage_blue_variant_bg">@color/m3_ref_palette_blue_variant80</color>
     <color name="homepage_blue_bg">@color/m3_ref_palette_blue80</color>

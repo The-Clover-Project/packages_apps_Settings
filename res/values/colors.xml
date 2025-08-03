@@ -25,6 +25,9 @@
 
     <color name="sim_noitification">@*android:color/accent_device_default_light</color>
 
+    <color name="settingslib_materialColorSecondaryContainer">#CCE8E2</color>
+    <color name="settingslib_materialColorOnSecondaryContainer">#051F1B</color>
+
     <!-- Accent color that matches the settings launcher icon -->
     <color name="icon_accent">#ffabffec</color>
 
