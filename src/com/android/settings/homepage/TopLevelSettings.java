@@ -50,7 +50,6 @@ import com.android.settings.activityembedding.ActivityEmbeddingUtils;
 import com.android.settings.core.RoundCornerPreferenceAdapter;
 import com.android.settings.core.SubSettingLauncher;
 import com.android.settings.dashboard.DashboardFragment;
-import com.android.settings.flags.Flags;
 import com.android.settings.overlay.FeatureFactory;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.support.SupportPreferenceController;
@@ -119,7 +118,7 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
 
     @Override
     protected int getPreferenceScreenResId() {
-        return getPreferenceLayoutResId(getContext());
+        return R.xml.top_level_settings;
     }
 
     @Override
@@ -243,9 +242,6 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         super.onCreatePreferences(savedInstanceState, rootKey);
-        if (Flags.homepageRevamp()) {
-            return;
-        }
         for (int i = 0; i < CHANGE_LAYOUT_KEYS.length; i++) {
             Preference preference = findPreference(CHANGE_LAYOUT_KEYS[i]);
             if (preference != null){
@@ -381,9 +377,6 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
             return mHighlightMixin.onCreateAdapter(this, preferenceScreen, mScrollNeeded);
         }
 
-        if (Flags.homepageRevamp()) {
-            return new RoundCornerPreferenceAdapter(preferenceScreen);
-        }
         return super.onCreateAdapter(preferenceScreen);
     }
 
@@ -429,14 +422,6 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
         void doForEach(Preference preference);
     }
 
-    private static int getPreferenceLayoutResId(Context context) {
-        return Flags.homepageRevamp()
-                ? SettingsThemeHelper.isExpressiveTheme(context)
-                        ? R.xml.top_level_settings_expressive
-                        : R.xml.top_level_settings_v2
-                : R.xml.top_level_settings;
-    }
-
     public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
             new BaseSearchIndexProvider() {
 
@@ -445,7 +430,7 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
                 public List<SearchIndexableResource> getXmlResourcesToIndex(
                         @NonNull Context context, boolean enabled) {
                     SearchIndexableResource sir = new SearchIndexableResource(context);
-                    sir.xmlResId = getPreferenceLayoutResId(context);
+                    sir.xmlResId = R.xml.top_level_settings;
                     return List.of(sir);
                 }
 
