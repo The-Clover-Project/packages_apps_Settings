@@ -245,6 +245,26 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         super.onCreatePreferences(savedInstanceState, rootKey);
+        applyPreferenceCustomizations();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        // Post the customization to ensure it runs after any dynamic tile refresh
+        if (getView() != null) {
+            getView().post(() -> applyPreferenceCustomizations());
+        } else {
+            applyPreferenceCustomizations();
+        }
+    }
+
+    /**
+     * Apply custom layout and order settings to preferences.
+     * This needs to be called both during initial creation and after navigation
+     * to handle dynamic preference refresh.
+     */
+    private void applyPreferenceCustomizations() {
         // Handle layout changes for standard tiles
         for (int i = 0; i < CHANGE_LAYOUT_KEYS.length; i++) {
             Preference preference = findPreference(CHANGE_LAYOUT_KEYS[i]);
@@ -268,8 +288,39 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
             if (preference != null){
                 preference.setLayoutResource(R.layout.clover_card_backup);
                 preference.setOrder(9);
+                Log.d(TAG, "Applied backup tile customizations to: " + BACKUP_TILE_KEYS[i]);
             }
         }
+    }
+
+    /**
+     * Check if a given tile key matches any backup tile key.
+     */
+    private boolean isBackupTile(String tileKey) {
+        if (tileKey == null) return false;
+        
+        for (String backupKey : BACKUP_TILE_KEYS) {
+            if (backupKey.equals(tileKey) || 
+                backupKey.equals("dashboard_tile_pref_" + tileKey)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * Check if a given tile key matches any device-specific tile key.
+     */
+    private boolean isDeviceSpecificTile(String tileKey) {
+        if (tileKey == null) return false;
+        
+        for (String deviceKey : CHANGE_LAYOUT_AND_ORDER_KEYS) {
+            if (deviceKey.equals(tileKey) || 
+                deviceKey.equals("dashboard_tile_pref_" + tileKey)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     @Override
@@ -397,13 +448,40 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
 
     @Override
     protected Preference createPreference(Tile tile) {
-        return new HomepagePreference(getPrefContext());
+        Preference preference = new HomepagePreference(getPrefContext());
+        
+        // Apply custom order and layout for tiles when they're dynamically created
+        String tileKey = tile.getKey(getContext());
+        String prefKey = "dashboard_tile_pref_" + tileKey;
+        
+        if (isBackupTile(prefKey) || isBackupTile(tileKey)) {
+            preference.setOrder(9);
+            preference.setLayoutResource(R.layout.clover_card_backup);
+            Log.d(TAG, "Created backup tile with order 9: " + prefKey);
+        } else if (isDeviceSpecificTile(prefKey) || isDeviceSpecificTile(tileKey)) {
+            preference.setOrder(12);
+            preference.setLayoutResource(R.layout.clover_card_device);
+            Log.d(TAG, "Created device-specific tile with order 12: " + prefKey);
+        }
+        
+        return preference;
     }
 
     void reloadHighlightMenuKey() {
         if (mHighlightMixin != null) {
             mHighlightMixin.reloadHighlightMenuKey(getArguments());
         }
+    }
+
+    /**
+     * Override to apply customizations after dashboard tiles are refreshed.
+     * This ensures our customizations persist even after dynamic tile refresh.
+     */
+    @Override
+    protected void onDashboardTilesRefreshed() {
+        super.onDashboardTilesRefreshed();
+        // Apply customizations after tiles are refreshed to ensure proper ordering
+        applyPreferenceCustomizations();
     }
 
     private void iteratePreferences(PreferenceJob job) {

@@ -665,6 +665,17 @@ public abstract class DashboardFragment extends SettingsPreferenceFragment
             Log.d(tag, "Stop waiting observers");
             pendingObservers.forEach(DynamicDataObserver::updateUi);
         }
+        // Call hook for subclasses to apply customizations
+        onDashboardTilesRefreshed();
+    }
+
+    /**
+     * Called after dashboard tiles have been refreshed.
+     * Subclasses can override this to apply custom styling or ordering.
+     */
+    protected void onDashboardTilesRefreshed() {
+        // Default implementation does nothing
+        // Subclasses can override to apply customizations
     }
 
     @Override
