@@ -91,15 +91,18 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
     public static final String[] CHANGE_LAYOUT_KEYS = {
         "top_level_google",
         "dashboard_tile_pref_com.google.android.apps.wellbeing.settings.TopLevelSettingsActivity",
-        "top_level_wellbeing",
-        "dashboard_tile_pref_com.google.android.gms.backup.component.BackupOrRestoreSettingsActivity",        
+        "top_level_wellbeing"
+    };
+
+    // Separate array for backup tile to control its order specifically
+    public static final String[] BACKUP_TILE_KEYS = {
+        "dashboard_tile_pref_com.google.android.gms.backup.component.BackupOrRestoreSettingsActivity"
     };
 
     public static final int[] LAYOUTS_N = {
         R.layout.clover_card_google,
         R.layout.clover_card_wellbeing,
-        R.layout.clover_card_wellbeing,
-        R.layout.clover_card_backup
+        R.layout.clover_card_wellbeing
     };
 
     public TopLevelSettings() {
@@ -242,17 +245,29 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         super.onCreatePreferences(savedInstanceState, rootKey);
+        // Handle layout changes for standard tiles
         for (int i = 0; i < CHANGE_LAYOUT_KEYS.length; i++) {
             Preference preference = findPreference(CHANGE_LAYOUT_KEYS[i]);
             if (preference != null){
                 preference.setLayoutResource(LAYOUTS_N[i]);
             }
         }
+        
+        // Handle layout and order changes for device-specific tiles
         for (int i = 0; i < CHANGE_LAYOUT_AND_ORDER_KEYS.length; i++) {
             Preference preference = findPreference(CHANGE_LAYOUT_AND_ORDER_KEYS[i]);
             if (preference != null){
                 preference.setLayoutResource(R.layout.clover_card_device);
                 preference.setOrder(12);
+            }
+        }
+        
+        // Handle backup layouts specifically
+        for (int i = 0; i < BACKUP_TILE_KEYS.length; i++) {
+            Preference preference = findPreference(BACKUP_TILE_KEYS[i]);
+            if (preference != null){
+                preference.setLayoutResource(R.layout.clover_card_backup);
+                preference.setOrder(9);
             }
         }
     }
