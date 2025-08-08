@@ -55,6 +55,7 @@ android_library {
     srcs: [
         "src/**/*.java",
         "src/**/*.kt",
+        "custom-preference/src/**/*.java",
     ],
     exclude_srcs: [
         "src/com/android/settings/biometrics/fingerprint2/lib/**/*.kt",
@@ -64,6 +65,7 @@ android_library {
         "res",
         "res-export", // for external usage
         "res-product",
+        "custom-preference/res",
         "TouchGestures/res"
     ],
     static_libs: [
@@ -117,7 +119,6 @@ android_library {
         "keyboard_flags_lib",
         "com_android_systemui_flags_lib",
         "settings_connectivity_flags_lib",
-        "custom-preference",
         "androidx.fragment_fragment",
         "androidx.fragment_fragment-ktx",
         "androidx.preference_preference-ktx",
