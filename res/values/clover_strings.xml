@@ -218,4 +218,12 @@
     <string name="status_bar_brightness_slider_position_top">Top</string>
     <string name="status_bar_brightness_slider_position_bottom">Bottom</string>
 
+    <!-- QS Tiles Style -->
+    <string name="quicksettings_title">Quick Settings</string>
+    <string name="qs_tile_shape_title">QS tiles shape</string>
+    <string name="qs_tile_shape_dynamic">Dynamic</string>
+    <string name="qs_tile_shape_circle">Circle</string>
+    <string name="qs_tile_shape_rounded_square">Rounded square</string>
+    <string name="qs_tile_shape_square">Square</string>
+
 </resources>
