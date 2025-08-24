@@ -65,6 +65,13 @@
             android:entryValues="@array/status_bar_brightness_slider_position_values"
             android:defaultValue="0" />
 
+        <com.android.settings.clover.preference.SystemSettingListPreference
+            android:key="qs_brightness_slider_shape"
+            android:title="@string/qs_brightness_slider_shape_title"
+            android:entries="@array/qs_brightness_slider_shape_entries"
+            android:entryValues="@array/qs_brightness_slider_shape_values"
+            android:defaultValue="0" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
