@@ -404,5 +404,9 @@
     <!-- click to take partial screenshot -->
     <string name="click_partial_screenshot_title">Click to partial screenshot</string>
     <string name="click_partial_screenshot_summary">Short click Volume Down and Power to take partial screenshot</string>
-  
+
+    <!-- Notch Apps Settings -->
+    <string name="app_display_cutout_title">Fullscreen Apps</string>
+    <string name="app_display_cutout_summary">Choose which apps can extend into the notch area</string>
+
 </resources>
