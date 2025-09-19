@@ -115,6 +115,12 @@
             android:fragment="com.android.settings.gestures.SystemNavigationGestureSettings"
             settings:controller="com.android.settings.gestures.SystemNavigationPreferenceController"/>
 
+        <Preference
+            android:key="notch_enabled_apps"
+            android:title="@string/app_display_cutout_title"
+            android:summary="@string/app_display_cutout_summary"
+            settings:controller="com.android.settings.display.NotchAppsPreferenceController" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
