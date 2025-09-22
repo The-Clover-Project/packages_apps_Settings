@@ -295,10 +295,6 @@
     <string name="force_lte_ca_title">Carrier aggregation</string>
     <string name="force_lte_ca_summary">Enhances LTE bandwidth by aggregating supported bands</string>
 
-    <!-- Ignore window secure -->
-    <string name="ignore_window_secure_title">Ignore window secure flags</string>
-    <string name="ignore_window_secure_summary">Remove screenshot and screenrecord limits for all apps. This can be convenient in some cases but may lead to privacy leaks.</string>
-
     <!-- Override Mock Location restriction -->
     <string name="override_mock_location_title">Override mock location restriction</string>
     <string name="override_mock_location_summary">When enabled, apps cannot detect mock locations</string>
@@ -311,8 +307,8 @@
     <string name="use_gpu_for_screen_composition_title">Use GPU for screen composition</string>
     <string name="use_gpu_for_screen_composition_summary">Select apps that should disable HW overlays while in use</string>
 
-    <!-- Hide screen capture status -->
-    <string name="hide_screen_capture_status_title">Hide screen capture status</string>
-    <string name="hide_screen_capture_status_summary">Hide screen capture and screen record status from all applications. Can be convenient in some cases but may lead to privacy leaks. Need to restart applications for the change to take effect.</string>
+    <!-- Hide screen capture & Ignore secure window status -->
+    <string name="screen_capture_controls_title">Screen capture controls</string>
+    <string name="screen_capture_controls_summary">Manage how screenshots work. You can hide capture status and allow screenshots in protected apps. In some cases, this may lead to privacy leaks.</string>
 
 </resources>
