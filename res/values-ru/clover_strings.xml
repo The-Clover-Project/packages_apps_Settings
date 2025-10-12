@@ -291,12 +291,6 @@
     <string name="status_bar_battery_style_text">Текст</string>
     
     <!-- Status bar - Battery percentage -->
-     <string name="status_bar_battery_style_title">Стиль отображения батареи</string>
-    <string name="status_bar_battery_style_icon_portrait">Иконка (портрет)</string>
-    <string name="status_bar_battery_style_circle">Круг</string>
-    <string name="status_bar_battery_style_text">Текст</string>
-    
-    <!-- Status bar - Battery percentage -->
     <string name="status_bar_battery_percentage_title">Процент заряда батареи</string>
     <string name="status_bar_battery_percentage_default">Скрыт</string>
     <string name="status_bar_battery_percentage_text_inside">Внутри иконки</string>
