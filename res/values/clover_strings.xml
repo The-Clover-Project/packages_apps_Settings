@@ -229,5 +229,9 @@
     <!-- Black theme for dark mode -->
     <string name="berry_black_theme_title">Pure black</string>
     <string name="berry_black_theme_summary">Pure black background for dark theme</string>
+
+    <!-- Force LTE_CA -->
+    <string name="force_lte_ca_title">Carrier Aggregation</string>
+    <string name="force_lte_ca_summary">Enhances LTE bandwidth by aggregating supported bands.</string>
   
 </resources>
