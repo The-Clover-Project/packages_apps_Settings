@@ -179,4 +179,7 @@
     <!-- About phone screen, status item URI -->
     <string name="clover_website_uri" translatable="false">https://thecloverproject.com</string>
 
+    <!-- Clover Maintainer -->
+    <string name="clover_maintainer">Maintainer</string>
+
 </resources>
