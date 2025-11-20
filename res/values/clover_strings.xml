@@ -20,4 +20,10 @@
     <string name="adb_enable_root">Rooted debugging</string>
     <string name="adb_enable_summary_root">Allow running Android debugging as root</string>
 
+    <!-- About phone screen, status item label -->
+    <string name="clover_firmware_version">Clover version</string>
+
+    <!-- About phone screen, status item URI -->
+    <string name="clover_website_uri" translatable="false">https://thecloverproject.com</string>
+
 </resources>
