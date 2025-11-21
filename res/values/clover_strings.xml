@@ -207,7 +207,7 @@
 
     <!-- Pif Data -->
     <string name="pif_data_title">Select PIF JSON to spoof</string>
-    <string name="pif_data_summary">Select PIF JSON used for prop attestation spoofing for google mobile services and play store. Click the delete button in order to reset the PIF data props and use dynamic PIF props which are used by default.</string>
+    <string name="pif_data_summary">Select the PIF JSON for GMS/Play Store spoofing. Click delete to reset props and revert to default dynamic PIF.</string>
 
     <!-- GMS cert chain -->
     <string name="gms_cert_chain_title">Disable forcing strong integrity</string>
