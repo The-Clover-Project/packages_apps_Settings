@@ -220,5 +220,10 @@
     <!-- Google Backup -->
     <string name="google_backup_title">Google Backup</string>
     <string name="google_backup_summary">Backup and restore your data</string>
+
+    <!-- Dt2Sleep -->
+    <string name="double_tap_screen_to_sleep_summary">Double tap an empty space on the lock screen to turn off the screen.</string>
+    <string name="double_tap_screen_to_sleep_title">Double tap to turn off screen</string>
+    <string name="keywords_double_tap_screen_to_sleep">double tap to sleep, lock screen</string>
   
 </resources>
