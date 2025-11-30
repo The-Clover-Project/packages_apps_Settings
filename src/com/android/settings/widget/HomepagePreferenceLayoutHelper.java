@@ -106,6 +106,13 @@ public class HomepagePreferenceLayoutHelper {
         }
     }
 
+    private void hideSummaryIfNeeded(PreferenceViewHolder holder) {
+        View summary = holder.findViewById(android.R.id.summary);
+        if (summary != null) {
+            summary.setVisibility(View.GONE);
+        }
+    }
+
     void onBindViewHolder(PreferenceViewHolder holder) {
         mIcon = holder.findViewById(R.id.icon_frame);
         mText = holder.findViewById(R.id.text_frame);
@@ -117,5 +124,9 @@ public class HomepagePreferenceLayoutHelper {
         setIconPaddingStart(mIconPaddingStart);
         setTextPaddingStart(mTextPaddingStart);
         setAlert(mAlertValue);
+
+        if (Flags.homepageRevamp()) {
+            hideSummaryIfNeeded(holder);
+        }
     }
 }
