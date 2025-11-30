@@ -79,19 +79,13 @@ public abstract class DashboardFragment extends SettingsPreferenceFragment
     private static final String TAG = "DashboardFragment";
     private static final long TIMEOUT_MILLIS = 50L;
 
-    private static final List<String> ACCOUNT_INJECTED_KEYS = Arrays.asList(
-        "dashboard_tile_pref_com.google.android.gms.backup.component.BackupOrRestoreSettingsActivity"
-    );
-
     private static final List<String> SECURITY_PRIVACY_INJECTED_KEYS = Arrays.asList(
-        "top_level_wellbeing",
         "top_level_google"
     );
 
     private static final ArrayMap<String, Integer> KEY_ORDER = new ArrayMap<>();
     static {
         // We have "Passwords, passkeys & accounts with order "-10" above
-        KEY_ORDER.put("top_level_wellbeing", -5);
         KEY_ORDER.put("top_level_google", 0);
         // We have "Safety & emergency with order "10" below
     }
@@ -391,7 +385,21 @@ public abstract class DashboardFragment extends SettingsPreferenceFragment
     protected boolean displayTile(Tile tile) {
         if (mSuppressInjectedTileKeys != null && tile.hasKey()) {
             // For suppressing injected tiles for OEMs.
-            return !mSuppressInjectedTileKeys.contains(tile.getKey(getContext()));
+            if (mSuppressInjectedTileKeys.contains(tile.getKey(getContext()))) {
+                return false;
+            }
+        }
+
+        if (tile.getIntent() != null && tile.getIntent().getComponent() != null) {
+            String className = tile.getIntent().getComponent().getClassName();
+            
+            if ("com.google.android.gms.backup.component.BackupOrRestoreSettingsActivity".equals(className)) {
+                return false;
+            }
+
+            if ("com.google.android.apps.wellbeing.settings.TopLevelSettingsActivity".equals(className)) {
+                return false;
+            }
         }
         return true;
     }
@@ -647,8 +655,6 @@ public abstract class DashboardFragment extends SettingsPreferenceFragment
                     if (tile.hasGroupKey()
                             && mDashboardTilePrefKeys.containsKey(tile.getGroupKey())) {
                         group = screen.findPreference(tile.getGroupKey());
-                    } else if (ACCOUNT_INJECTED_KEYS.contains(key)) {
-                        group = screen.findPreference("top_level_account_category");
                     } else if (SECURITY_PRIVACY_INJECTED_KEYS.contains(key)) {
                         group = screen.findPreference("top_level_security_privacy_category");
                     }

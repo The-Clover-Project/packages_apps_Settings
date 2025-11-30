@@ -212,5 +212,13 @@
     <!-- GMS cert chain -->
     <string name="gms_cert_chain_title">Disable forcing strong integrity</string>
     <string name="gms_cert_chain_summary">Forcing strong integrity breaks apps like Google Pay, enabling this option fixes such apps.</string>
+
+    <!-- Digital wellbeing -->
+    <string name="wellbeing_title">Digital wellbeing</string>
+    <string name="wellbeing_summary">Digital wellbeing and parental controls</string>
+
+    <!-- Google Backup -->
+    <string name="google_backup_title">Google Backup</string>
+    <string name="google_backup_summary">Backup and restore your data</string>
   
 </resources>

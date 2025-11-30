@@ -100,5 +100,9 @@
 
     <!-- Keyboard a11y input dialog -->
     <color name="input_dialog_slider_progress">@android:color/system_on_primary_container_dark</color>
+
+    <!-- Settings Dashboard -->
+    <color name="homepage_subicon_bg">?android:attr/colorAccent</color>
+    <color name="homepage_icon_bg">@*android:color/system_neutral2_700</color>
 </resources>
 

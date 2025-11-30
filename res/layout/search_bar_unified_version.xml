@@ -15,37 +15,38 @@
      limitations under the License.
 -->
 
-<com.google.android.material.card.MaterialCardView
+<com.google.android.material.card.MaterialCardView 
     xmlns:android="http://schemas.android.com/apk/res/android"
-    style="@style/SearchBarStyle_v2"
+    xmlns:androidprv="http://schemas.android.com/apk/prv/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    style="@style/SearchBarStyle_v2">
 
     <LinearLayout
-        android:id="@+id/search_action_bar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:minHeight="72dp"
         android:gravity="center_vertical"
         android:orientation="horizontal"
+        android:id="@+id/search_action_bar"
+        android:background="@drawable/search_bar_selected_background"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/search_bar_height"
         android:paddingStart="24dp"
-        android:paddingEnd="24dp"
-        android:focusedByDefault="true"
-        android:background="@drawable/search_bar_selected_background">
+        android:paddingEnd="24dp">
 
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:importantForAccessibility="no"
-            android:src="@drawable/ic_homepage_search" />
+            android:src="@drawable/ic_homepage_search"
+            android:importantForAccessibility="no"/>
         <TextView
             android:id="@+id/search_bar_title"
-            style="@style/TextAppearance.SearchBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
+            android:text="@string/search_settings"
+            android:paddingStart="8dp"
             android:paddingEnd="8dp"
-            android:text="@string/homepage_search"/>
+            android:textColor="@androidprv:color/materialColorOnSurfaceVariant"
+            style="@style/TextAppearance.SearchBar"/>
     </LinearLayout>
 </com.google.android.material.card.MaterialCardView>
