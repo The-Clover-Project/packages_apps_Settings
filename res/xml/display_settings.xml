@@ -50,6 +50,21 @@
             settings:keywords="@string/keywords_display_hdr_brightness"
             settings:controller="com.android.settings.display.HdrBrightnessPreferenceController"/>
 
+        <com.android.settings.clover.preference.SecureSettingSwitchPreference
+            android:key="qs_show_brightness_slider"
+            android:title="@string/status_bar_brightness_slider_title"
+            android:summary="@string/status_bar_brightness_slider_summary"
+            android:defaultValue="true" />
+
+        <com.android.settings.clover.preference.SecureSettingListPreference
+            android:key="qs_brightness_slider_position"
+            android:title="@string/status_bar_brightness_slider_position_title"
+            android:summary="%s"
+            android:dependency="qs_show_brightness_slider"
+            android:entries="@array/status_bar_brightness_slider_position_entries"
+            android:entryValues="@array/status_bar_brightness_slider_position_values"
+            android:defaultValue="0" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
