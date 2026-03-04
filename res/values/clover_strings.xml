@@ -300,7 +300,7 @@
     <string name="ignore_window_secure_summary">Remove screenshot and screenrecord limits for all apps. This can be convenient in some cases but may lead to privacy leaks.</string>
 
     <!-- Override Mock Location restriction -->
-    <string name="override_mock_location_title">Override MockLocation restriction</string>
+    <string name="override_mock_location_title">Override mock location restriction</string>
     <string name="override_mock_location_summary">When enabled, apps cannot detect mock locations</string>
 
 </resources>
