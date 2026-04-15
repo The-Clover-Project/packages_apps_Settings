@@ -59,6 +59,14 @@
         settings:enableCopying="true"
         settings:controller="com.android.settings.deviceinfo.firmwareversion.MainlineModuleVersionPreferenceController"/>
 
+    <!-- Clover maintainer -->
+    <Preference
+        android:key="clover_maintainer"
+        android:title="@string/clover_maintainer"
+        android:summary="@string/summary_placeholder"
+        settings:enableCopying="true"
+        settings:controller="com.android.settings.deviceinfo.firmwareversion.CloverMaintainerPreferenceController"/>
+
     <!-- Baseband -->
     <Preference
         android:key="base_band"
