@@ -36,6 +36,14 @@
         settings:searchable="false"
         settings:controller="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionDetailPreferenceController"/>
 
+    <!-- Clover version -->
+    <Preference
+        android:key="clover_version"
+        android:title="@string/clover_firmware_version"
+        android:summary="@string/summary_placeholder"
+        settings:enableCopying="true"
+        settings:controller="com.android.settings.deviceinfo.firmwareversion.CloverVersionPreferenceController"/>
+
     <!-- Security patch -->
     <Preference
         android:key="security_key"
