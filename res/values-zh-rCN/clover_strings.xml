@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2024-2025 The Clover Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- Android debugging as root -->
+    <string name="adb_enable_root">Root 调试</string>
+    <string name="adb_enable_summary_root">允许以 root 身份运行 Android 调试</string>
+
+    <!-- About phone screen, status item label -->
+    <string name="clover_firmware_version">Clover 版本</string>
+
+    <!-- About phone screen, status item URI -->
+    <string name="clover_website_uri" translatable="false">https://thecloverproject.com</string>
+
+    <!-- Clover Maintainer -->
+    <string name="clover_maintainer">维护者</string>
+
+    <!-- [CHAR LIMIT=NONE] Device Info screen. Countdown for user taps to enable development settings -->
+    <string name="show_dev_countdown_cm">{计数, 复数,
+      =1      {你现在距离启用开发者设置只有 # 步之遥.}
+      其他   {您现在距离启用开发者设置仅剩 # 步.}
+    }</string>
+    <!-- [CHAR LIMIT=NONE] Device Info screen. Confirmation that developer settings are enabled -->
+    <string name="show_dev_on_cm">您已启用开发者设置!</string>
+    <!-- [CHAR LIMIT=NONE] Device Info screen. Okay we get it, stop pressing, you already have it on -->
+    <string name="show_dev_already_cm">不用了，你已经启用了开发者设置.</string>
+
+    <!-- Message shown in fingerprint enrollment dialog to locate the sensor -->
+    <string name="fingerprint_enroll_find_sensor_message_front" product="tablet">请找到平板电脑正面的指纹传感器。</string>
+    <string name="fingerprint_enroll_find_sensor_message_front" product="device">请找到设备正面的指纹传感器。</string>
+    <string name="fingerprint_enroll_find_sensor_message_front" product="default">请找到手机正面的指纹传感器。</string>
+    <string name="fingerprint_enroll_find_sensor_message_rear" product="tablet">请找到平板电脑背面的指纹传感器。</string>
+    <string name="fingerprint_enroll_find_sensor_message_rear" product="device">请找到设备背面的指纹传感器。</string>
+    <string name="fingerprint_enroll_find_sensor_message_rear" product="default">请找到手机背面的指纹传感器。</string>
+    <string name="fingerprint_enroll_find_sensor_message_side" product="tablet">请找到平板电脑侧面的指纹传感器。</string>
+    <string name="fingerprint_enroll_find_sensor_message_side" product="device">请找到设备侧面的指纹传感器。</string>
+    <string name="fingerprint_enroll_find_sensor_message_side" product="default">请找到手机侧面的指纹传感器。</string>
+
+    <!-- Message shown when user touches the icon on the screen, instead of the real fingerprint sensor -->
+    <string name="fingerprint_enroll_touch_dialog_message_front" product="tablet">请触摸平板电脑正面的传感器。</string>
+    <string name="fingerprint_enroll_touch_dialog_message_front" product="device">请触摸设备正面的传感器。</string>
+    <string name="fingerprint_enroll_touch_dialog_message_front" product="default">请触摸手机正面的传感器。</string>
+    <string name="fingerprint_enroll_touch_dialog_message_rear" product="tablet">请触摸平板电脑背面的传感器。</string>
+    <string name="fingerprint_enroll_touch_dialog_message_rear" product="device">请触摸设备背面的传感器。</string>
+    <string name="fingerprint_enroll_touch_dialog_message_rear" product="default">请触摸手机背面的传感器。</string>
+    <string name="fingerprint_enroll_touch_dialog_message_side" product="tablet">请触摸平板电脑侧面的传感器。</string>
+    <string name="fingerprint_enroll_touch_dialog_message_side" product="device">请触摸设备侧面的传感器。</string>
+    <string name="fingerprint_enroll_touch_dialog_message_side" product="default">请触摸手机侧面的传感器。</string>
+    <!-- Warning message for the sd card setup -->
+    <string name="storage_warning_internal">警告：此选项可能无法正常工作或导致数据丢失，因此不建议使用!</string>
+
+    <!-- Location settings screen, setting check box label if Assisted GPS should be enabled -->
+    <string name="assisted_gps">使用辅助GPS</string>
+    <!-- Location settings screen, setting summary for Assisted GPS switch -->
+    <string name="assisted_gps_summary">从互联网下载卫星辅助数据，可显著提升GPS的启动性能。在紧急呼叫时，始终允许使用辅助GPS。</string>
+
+    <!-- Private DNS -->
+    <string name="private_dns_mode_cloudflare" translatable="false">Cloudflare DNS</string>
+    <!-- Alternative: 1dot1dot1dot1.cloudflare-dns.com -->
+    <string name="private_dns_hostname_cloudflare" translatable="false">one.one.one.one</string>
+
+    <!-- Battery Info: Technology -->
+    <string name="battery_technology">电池技术</string>
+    <string name="battery_technology_not_available" translatable="false">@string/battery_cycle_count_not_available</string>
+
+    <!-- Battery Info: Health -->
+    <string name="battery_health">电池健康状态</string>
+    <string name="battery_health_good">良好</string>
+    <string name="battery_health_overheat">过热</string>
+    <string name="battery_health_dead">已耗尽</string>
+    <string name="battery_health_over_voltage">过压</string>
+    <string name="battery_health_unspecified_failure">未指定故障</string>
+    <string name="battery_health_cold">过冷</string>
+    <string name="battery_health_unknown">未知</string>
+
+    <!-- Battery Info: Temperature -->
+    <string name="battery_temperature">温度</string>
+    <string name="battery_temperature_not_available" translatable="false">@string/battery_cycle_count_not_available</string>
+
+    <!-- Battery Info: Voltage -->
+    <string name="battery_voltage">电压</string>
+    <string name="battery_voltage_not_available" translatable="false">@string/battery_cycle_count_not_available</string>
+
+    <!-- Battery Info: Charge Counter -->
+    <string name="battery_charge_counter_summary">%1$d mAh</string>
+
+    <!-- Battery Info: Design Capacity -->
+    <string name="battery_design_capacity">设计容量</string>
+    <string name="battery_design_capacity_summary">%1$d mAh</string>
+    <string name="battery_design_capacity_not_available" translatable="false">@string/battery_cycle_count_not_available</string>
+
+    <!-- Battery Info: Maximum Capacity -->
+    <string name="battery_maximum_capacity">最大容量</string>
+    <string name="battery_maximum_capacity_summary">%1$d mAh (%2$d%%)</string>
+    <string name="battery_maximum_capacity_not_available" translatable="false">@string/battery_cycle_count_not_available</string>
+
+    <!-- Auto pin confirm -->
+    <string name="lock_screen_auto_pin_confirm_summary_custom">如果输入正确的 PIN 码则自动解锁，这比按“确认”按钮的安全性略低。</string>
+
+    <!-- Copy to clipboard -->
+    <string name="copied_to_clipboard">已复制到剪贴板</string>
+    <string name="longpress_to_clipboard">长按以复制</string>
+
+    <!-- Double tap to sleep on status bar or lockscreen -->
+    <string name="status_bar_double_tap_to_sleep_title">点按以休眠</string>
+    <string name="status_bar_double_tap_to_sleep_summary">双击状态栏或锁屏界面可关闭屏幕</string>
+
+    <!-- Refresh rate -->
+    <string name="refresh_rate_title">刷新率</string>
+    <string name="refresh_rate_summary_vrr_off">%d Hz</string>
+    <string name="refresh_rate_summary_vrr_on">%d Hz（自适应）</string>
+    <string name="refresh_rate_vrr_title">自适应刷新率</string>
+    <string name="refresh_rate_vrr_summary">当屏幕处于空闲状态时自动降低刷新率以节省电量。在某些显示屏上可能会引起闪烁或偏色。</string>
+    <string name="refresh_rate_footer">更高的刷新率可使显示更流畅，但会增加耗电量。</string>
+    <string name="keywords_refresh_rate">刷新, 率, 流畅, 峰值, 60hz, 90hz, 120hz, 144hz, 165hz</string>
+
+    <!-- Battery saver refresh rate -->
+    <string name="battery_saver_refresh_rate_title">降低刷新率</string>
+    <string name="battery_saver_refresh_rate_summary">省电模式开启时，使用 60 Hz 屏幕刷新率以节省电量</string>
+
+    <!-- Preference and settings suggestion title text for screen off UDFPS [CHAR LIMIT=60]-->
+    <string name="ambient_display_screen_off_udfps_title">始终开启指纹</string>
+    
+    <!-- Summary text for screen off UDFPS [CHAR LIMIT=NONE]-->
+    <string name="ambient_display_screen_off_udfps_summary">允许在屏幕关闭时解锁。\n开启可能导致意外唤醒。</string>
+
+    <!-- Wake on plug -->
+    <string name="wake_when_plugged_or_unplugged_title">插入时唤醒</string>
+    <string name="wake_when_plugged_or_unplugged_summary">在连接或断开电源时打开屏幕</string>
+
+    <!-- Black theme for dark mode -->
+    <string name="berry_black_theme_title">纯黑</string>
+    <string name="berry_black_theme_summary">为深色主题使用纯黑背景</string>
+
+    <!-- Three-fingers-swipe to screenshot -->
+    <string name="three_finger_gesture">滑动截屏</string>
+    <string name="three_finger_gesture_summary">用三根手指向下滑动以截取屏幕截图</string>
+
+    <!-- click to take partial screenshot -->
+    <string name="click_partial_screenshot_title">点击截取局部屏幕</string>
+    <string name="click_partial_screenshot_summary">同时短按音量减键和电源键以截取局部屏幕</string>
+
+    <!-- Smart 5G -->
+    <string name="smart_5g_title">智能 5G</string>
+    <string name="smart_5g_summary">在 5G 和 4G 之间自动切换以减少电池消耗</string>
+
+    <!-- Torch Power button gestures -->
+    <string name="power_button_torch_title">快速手电筒</string>
+    <string name="power_button_torch_summary">当屏幕关闭时，长按电源键将开启手电筒</string>
+
+    <!-- Volume button music control -->
+    <string name="volume_button_music_control_title">播放控制</string>
+    <string name="volume_button_music_control_summary">当屏幕关闭时，长按音量键可切换音乐曲目</string>
+
+    <!-- Cycle through ringer modes gesture -->
+    <string name="prevent_ringing_option_cycle">循环切换模式</string>
+    <string name="prevent_ringing_option_cycle_summary">开启（循环切换模式）</string>
+
+    <!-- Incall vibrate options -->
+    <string name="incall_vibration_category">通话中振动选项</string>
+    <string name="incall_vibrate_connect_title">接通时振动</string>
+    <string name="incall_vibrate_call_wait_title">呼叫等待时振动</string>
+    <string name="incall_vibrate_disconnect_title">挂断时振动</string>
+
+    <!-- Ambient wake toggles -->
+    <string name="doze_gesture_ambient_title">显示熄屏显示</string>
+    <string name="doze_gesture_ambient_summary">显示熄屏显示而不是完全唤醒屏幕</string>
+    <string name="gesture_wake_ambient">显示熄屏显示</string>
+    <string name="gesture_wake">完全唤醒</string>
+
+    <!-- Doze enablement -->
+    <string name="doze_enabled_title">熄屏显示</string>
+    <string name="doze_enabled_summary">启用熄屏显示功能包</string>
+
+    <!-- Status bar Icon Manager -->
+    <string name="icon_manager_title">图标管理器</string>
+    <string name="icon_manager_summary">控制状态栏图标的可见性</string>
+
+    <!-- Screenshot shutter -->
+    <string name="screenshot_shutter_sound_title">截屏声音</string>
+
+    <!-- Keybox Data -->
+    <string name="keybox_data_title">选择用于伪造的 keybox XML</string>
+    <string name="keybox_data_summary">选择用于全局密钥认证伪造的 keybox XML 文件。点击删除可重置 keybox 数据。</string>
+
+    <!-- Pif Data -->
+    <string name="pif_data_title">选择用于伪造的 PIF JSON</string>
+    <string name="pif_data_summary">选择用于 GMS/Play Store 伪造的 PIF JSON 文件。点击删除可重置属性并恢复为默认的动态 PIF。</string>
+
+    <!-- Doze on double tap -->
+    <string name="double_tap_title">双击</string>
+    <string name="doze_double_tap_title">双击以查看手机</string>
+    <string name="doze_double_tap_summary">双击即可让通知脉冲显示</string>
+
+    <!-- Status bar - Brightness -->
+    <string name="status_bar_brightness_slider_title">亮度滑块</string>
+    <string name="status_bar_brightness_slider_summary">从快捷设置中调节亮度</string>
+    <string name="status_bar_brightness_slider_auto_title">自动亮度</string>
+    <string name="status_bar_brightness_slider_auto_summary">在滑块附近显示自适应亮度开关</string>
+    <string name="status_bar_brightness_slider_position_title">亮度滑块位置</string>
+    <string name="status_bar_brightness_slider_position_top">顶部</string>
+    <string name="status_bar_brightness_slider_position_bottom">底部</string>
+
+    <!-- QS Tiles Style -->
+    <string name="default_value">默认</string>
+    <string name="quicksettings_title">快捷设置</string>
+    <string name="qs_tile_shape_title">QS 磁贴形状</string>
+    <string name="qs_tile_shape_dynamic">动态</string>
+    <string name="qs_tile_shape_circle">圆形</string>
+    <string name="qs_tile_shape_rounded_square">圆角方形</string>
+
+    <!-- Brightness Slider Style -->
+    <string name="qs_brightness_slider_shape_title">亮度滑块形状</string>
+
+    <!-- Global Actions -->
+    <string name="global_actions_advanced_reboot_title">启用高级重启</string>
+    <string name="global_actions_advanced_reboot_summary">在电源菜单中显示恢复模式和引导加载程序选项</string>
+
+    <!-- Override Mock Location restriction -->
+    <string name="override_mock_location_title">覆盖模拟位置限制</string>
+    <string name="override_mock_location_summary">启用后，应用无法检测到模拟位置</string>
+
+    <!-- Notch Apps Settings -->
+    <string name="app_display_cutout_title">全屏应用</string>
+    <string name="app_display_cutout_summary">选择哪些应用可以扩展到刘海区域</string>
+
+    <!-- Locale Picker -->
+    <string name="clear_search_query_description">清除查询</string>
+    <string name="language_picker_page">语言选择页面</string>
+    <string name="search_region">搜索区域</string>
+    <string name="search_region_page">搜索区域页面</string>
+
+    <!-- Force LTE_CA -->
+    <string name="force_lte_ca_title">载波聚合</string>
+    <string name="force_lte_ca_summary">通过聚合支持的频段来增强 LTE 带宽</string>
+
+    <!-- App lock -->
+    <string name="app_lock_title">应用锁</string>
+    <plurals name="app_lock_summary">
+      <item quantity="one">已保护 <xliff:g example="1" id="Number of applications">%1$d</xliff:g> 个应用</item>
+      <item quantity="other">已保护 <xliff:g example="10" id="Number of applications">%1$d</xliff:g> 个应用</item>
+    </plurals>
+    <string name="app_lock_authentication_dialog_title">解锁</string>
+    <string name="enable_debugging">启用调试</string>
+    <string name="disable_debugging">禁用调试</string>
+    <string name="app_lock_packages_title">受保护的应用</string>
+    <string name="app_lock_packages_summary">选择要使用生物识别或设备凭据保护的应用</string>
+    <string name="app_lock_timeout_title">自动锁定超时</string>
+    <string name="app_lock_timeout_summary">后台已解锁应用自动锁定所需的时间</string>
+    <string name="app_lock_notifications_title">隐藏通知内容</string>
+    <string name="app_lock_notifications_summary">当选定应用被锁定时，其通知内容将被隐藏并折叠。横幅通知将自动禁用。</string>
+    <string name="app_lock_notifications_disabled_summary">请先保护一个应用</string>
+    <string name="app_lock_biometrics_allowed_title">启用生物识别解锁</string>
+    <string name="app_lock_footer_text">超时后气泡将自动关闭</string>
+    <string name="enable_protection">启用保护</string>
+    <string name="hide_from_launcher_title">从启动器中隐藏</string>
+    <string name="hide_from_launcher_summary">阻止此应用在任何启动器中显示。需要重启启动器才能使更改生效。</string>
+    <string name="custom_timeout_summary_5secs">5秒</string>
+    <string name="custom_timeout_summary_10secs">10秒</string>
+    <string name="custom_timeout_summary_30secs">30秒</string>
+    <string name="custom_timeout_summary_1min">1分钟</string>
+    <string name="custom_timeout_summary_5mins">5分钟</string>
+    <string name="custom_timeout_summary_10mins">10分钟</string>
+    <string name="custom_timeout_summary_30mins">30分钟</string>
+
+    <!-- AdGuard DNS Option -->
+    <string name="private_dns_mode_adguard" translatable="false">AdGuard DNS</string>
+    
+    <!-- AdGuard DNS hostname -->
+    <string name="private_dns_hostname_adguard" translatable="false">dns.adguard.com</string>
+
+    <!-- Open DNS Option -->
+    <string name="private_dns_mode_open_dns" translatable="false">Open DNS</string>
+
+    <!-- Open DNS hostname -->
+    <string name="private_dns_hostname_open_dns" translatable="false">dns.opendns.com</string>
+
+    <!-- Cleanbrowsing DNS Option -->
+    <string name="private_dns_mode_cleanbrowsing" translatable="false">Cleanbrowsing DNS</string>
+
+    <!-- Cleanbrowsing DNS hostname -->
+    <string name="private_dns_hostname_cleanbrowsing" translatable="false">security-filter-dns.cleanbrowsing.org</string>
+
+    <!-- Quad9 DNS Option -->
+    <string name="private_dns_mode_quad9" translatable="false">Quad9 DNS</string>
+
+    <!-- Quad9 DNS hostname -->
+    <string name="private_dns_hostname_quad9" translatable="false">dns.quad9.net</string>
+
+    <!-- Cloudflare Block Malware DNS Option -->
+    <string name="private_dns_mode_cloudflare_block_malware" translatable="false">Cloudflare Block Malware DNS</string>
+
+    <!-- Cloudflare Block Malware DNS hostname -->
+    <string name="private_dns_hostname_cloudflare_block_malware" translatable="false">security.cloudflare-dns.com</string>
+
+    <!-- Cloudflare Block Malware and Adult Content DNS Option -->
+    <string name="private_dns_mode_cloudflare_block_malware_and_adult_content" translatable="false">Cloudflare Block Malware and Adult Content DNS</string>
+
+    <!-- Cloudflare Block Malware and Adult Content DNS hostname -->
+    <string name="private_dns_hostname_cloudflare_block_malware_and_adult_content" translatable="false">family.cloudflare-dns.com</string>
+
+    <!-- Quad9 Unsecured DNS Option -->
+    <string name="private_dns_mode_quad9_unsecured" translatable="false">Quad9 Unsecured DNS</string>
+
+    <!-- Quad9 Unsecured DNS hostname -->
+    <string name="private_dns_hostname_quad9_unsecured" translatable="false">dns10.quad9.net</string>
+
+    <!-- Quad9 ECS DNS Option -->
+    <string name="private_dns_mode_quad9_ecs" translatable="false">Quad9 with ECS DNS</string>
+
+    <!-- Quad9 ECS DNS hostname -->
+    <string name="private_dns_hostname_quad9_ecs" translatable="false">dns11.quad9.net</string>
+
+    <!-- Quad9 Unsecured ECS DNS Option -->
+    <string name="private_dns_mode_quad9_unsecured_ecs" translatable="false">Quad9 Unsecured with ECS DNS</string>
+
+    <!-- Quad9 Unsecured ECS DNS hostname -->
+    <string name="private_dns_hostname_quad9_unsecured_ecs" translatable="false">dns12.quad9.net</string>
+
+    <!-- Hide developer status -->
+    <string name="hide_developer_status_title">隐藏开发者状态</string>
+    <string name="hide_developer_status_summary">向应用隐藏开发者状态</string>
+    <string name="search">搜索</string>
+    <string name="search_apps">搜索应用</string>
+
+    <!-- Hide screen capture & Ignore secure window status -->
+    <string name="screen_capture_controls_title">屏幕截图控制</string>
+    <string name="screen_capture_controls_summary">管理屏幕截图的工作方式。您可以隐藏截图状态并允许在受保护的应用中进行截图。在某些情况下，这可能会导致隐私泄露。</string>
+
+</resources>
