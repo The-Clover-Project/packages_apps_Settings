@@ -25,4 +25,17 @@
     <!-- Clover Maintainer -->
     <string name="clover_maintainer">Maintainer</string>
 
+    <!-- About phone -->
+    <string name="about_phone_clover_version_pill_format">%1$s | v%2$s</string>
+    <string name="about_phone_android_version_pill_format">Android %1$s</string>
+    <string name="about_phone_device_overview_section_title">Device overview</string>
+    <string name="about_phone_basic_info_section_title">Basic Info</string>
+    <string name="about_phone_memory_card_title">Memory</string>
+    <string name="about_phone_device_name_card_title">Device</string>
+    <string name="about_phone_battery_card_title">Battery</string>
+    <string name="about_phone_resolution_card_title">Resolution</string>
+    <string name="about_phone_memory_card_value_format">%1$s + %2$s</string>
+    <string name="about_phone_resolution_card_value_format">%1$d x %2$d</string>
+    <string name="about_phone_more_device_info_title">More device info</string>
+
 </resources>
