@@ -20,4 +20,42 @@
     <!-- Fingerprint -->
     <dimen name="fingerprint_find_sensor_padding_top">16dp</dimen>
 
+    <!-- About phone -->
+    <dimen name="about_phone_brand_card_padding_top">0dp</dimen>
+    <dimen name="about_phone_brand_card_padding_bottom">24dp</dimen>
+    <dimen name="about_phone_brand_card_height">164dp</dimen>
+    <dimen name="about_phone_brand_card_corner_radius">28dp</dimen>
+    <dimen name="about_phone_brand_logo_width">22dp</dimen>
+    <dimen name="about_phone_brand_logo_height">22dp</dimen>
+    <dimen name="about_phone_brand_logo_spacing">1dp</dimen>
+    <dimen name="about_phone_brand_wordmark_text_size">29sp</dimen>
+    <dimen name="about_phone_brand_content_padding_horizontal">16dp</dimen>
+    <dimen name="about_phone_meta_pills_padding_bottom">4dp</dimen>
+    <dimen name="about_phone_meta_pill_corner_radius">28dp</dimen>
+    <dimen name="about_phone_meta_pill_horizontal_padding">14dp</dimen>
+    <dimen name="about_phone_meta_pill_vertical_padding">10dp</dimen>
+    <dimen name="about_phone_meta_pill_half_spacing">6dp</dimen>
+    <dimen name="about_phone_meta_pill_icon_size">18dp</dimen>
+    <dimen name="about_phone_meta_pill_icon_spacing">6dp</dimen>
+    <dimen name="about_phone_meta_pill_text_size">15sp</dimen>
+
+    <dimen name="about_phone_info_cards_padding_bottom">4dp</dimen>
+    <dimen name="about_phone_info_cards_title_margin_bottom">12dp</dimen>
+    <dimen name="about_phone_section_title_text_size">14sp</dimen>
+    <dimen name="about_phone_info_cards_row_spacing">12dp</dimen>
+    <dimen name="about_phone_info_cards_card_spacing">12dp</dimen>
+    <dimen name="about_phone_info_card_min_height">106dp</dimen>
+    <dimen name="about_phone_info_card_corner_radius">28dp</dimen>
+    <dimen name="about_phone_info_card_content_padding">14dp</dimen>
+    <dimen name="about_phone_more_device_info_arrow_size">32dp</dimen>
+    <dimen name="about_phone_info_card_icon_size">24dp</dimen>
+    <dimen name="about_phone_info_card_icon_spacing">8dp</dimen>
+    <dimen name="about_phone_info_card_label_pill_corner_radius">20dp</dimen>
+    <dimen name="about_phone_info_card_label_pill_horizontal_padding">10dp</dimen>
+    <dimen name="about_phone_info_card_label_pill_vertical_padding">6dp</dimen>
+    <dimen name="about_phone_info_card_label_pill_icon_spacing">6dp</dimen>
+    <dimen name="about_phone_info_card_label_text_size">13sp</dimen>
+    <dimen name="about_phone_info_card_value_text_size">15sp</dimen>
+    <dimen name="about_phone_info_card_value_spacing">4dp</dimen>
+
 </resources>
